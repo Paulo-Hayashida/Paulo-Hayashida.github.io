@@ -63,9 +63,13 @@
 		
 				<h3>(B)</h3>
 
-					
+					<p>Para realizar a calibração do exemplo executado, deve-se realizar a calibração como com uma única câmera, porém para cada uma das câmeras. Obtendo os parâmetros intrínsecos de cada câmera</p>
+					<p>Em seguida é necessário encontrar a matriz que relaciona as duas câmeras, com essa matriz é possível executar a retificação</p>
+					<p>Na retificação são necessários as matrizes intrínsecas e coeficientes de distorção de cada uma das câmeras. Como resultado é retornada a projeção da imagem capturada por cada câmera, sendo que as duas projeções se encontram no mesmo plano</p>
 		
 				<h3>(C)</h3>
+
+					<p>No arquivo de parâmetros de calibração (xml) foram salvos os mapas de correção e de retificação de cada câmera. Quando essas duas matrizes são aplicadas a uma imagem original, elas são convertidas para produzir as imagens de cada câmera projetadas num mesmo plano</p>
 		
 				<h3>(D)</h3>
 
@@ -92,16 +96,16 @@
 			
 			<h2>Referências</h2>
 
-				<p>		  [1] Geometria da formação de imagens:
-						https://learnopencv.com/geometry-of-image-formation/<br>
-						 [2] Calibração de Camera com OpenCV:
-						https://learnopencv.com/camera-calibration-using-opencv/ <br>
-						 [3] Camera Calibration. Atenção à parte de Distorção Radial da Lentes:
-						https://docs.opencv.org/4.x/dc/dbb/tutorial_py_calibration.html <br>
-						 [4] Camera Calibration Toolbox for Matlab:
-						http://robots.stanford.edu/cs223b04/JeanYvesCalib/ <br>
-						 [5] Pinhole camera model:
-						https://en.wikipedia.org/wiki/Pinhole_camera_model <br>
+				<p>		  [1] Geometria epipolar e visão estereo:
+						https://learnopencv.com/introduction-to-epipolar-geometry-and-stereo-vision>
+						 [2] Confecção e calibração de uma câmera estereo:
+						https://learnopencv.com/making-a-low-cost-stereo-camera-using-opencv <br>
+						 [3] :
+						 <br>
+						 [4] :
+						 <br>
+						 [5]:
+						 <br>
 				</p>
 
 
