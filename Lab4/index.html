@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>Lab 2</title>
+
+	<style>
+        .image-container {
+            display: inline-block;
+            width: 30%;
+            margin-right: 1.5%;
+            vertical-align: top;
+        }
+
+        .image-container img {
+            width: 50%;
+            height: auto;
+        }
+    	</style>
+	
+	</head>
+
+	<body>
+
+		<h1>Laboratório 4 - Estimação de Profundidade</h1>
+
+			<p>Lucas Daniel dos Santos RA: 11063416</p>
+			<p>Paulo Henrique Eiji Hayashida RA: 11104714</p>
+			<p>Victor Giovanetti Monteiro RA: 11201722116</p>
+
+			<p>Data de realização do experimento: 30/07/24</p>
+			<p>Data de Publicação: 06/08/24</p>
+
+			<h2>Introdução</h2>
+
+				<p>Neste laboratório foi possível construir e visualizar as propriedades das cameras estereos, onde através de imagens 2D é possível trazer uma sensação de profundidade, utilizando lentes de cores diferentes</p>
+		
+			<h2>Parte 1</h2>
+
+				<p>Para a primeira etapa foram disponibilizados 2 links referentes a documentações contendo excplicações teóricas sobre geometria epipolar e mapas de disparidade para estimação de profundidade.</p>
+		
+				<p>Link 1: https://learnopencv.com/introduction-to-epipolar-geometry-and-stereovision/.</p>
+
+          <p>O primeiro link assim como visto no Laborátorio 3 de camera estero, nos ensina que a partir duas imagens e tendo bem definidas suas posições os pontos projetados de um dado ponto 3D, é possível recuperar esse parâmetro de profundidade através de triangulação.</p>
+          <p>Caso a diferença entre os pontos no eixo y (altura) seja 0, então estamos trabalhando com a disparidade Stereo.</p>
+
+				<p>Link 2: https://learnopencv.com/depth-perception-using-stereo-camera-python-c/</p>
+
+          <p></p>
+          <p></p>
+          <p></p>
+
+			<h2>Parte 2</h2>
+
+				<p>Nesta etapa a partir da câmera construida no Laboratório 3 de câmera estereo, executou-se os passos a seguir</p>
+
+      <h2>Parte 3</h2>
+    
+				<h3>(A)</h3>
+
+					<p>Executou-se a calibração, como no Laboratório 3, com o programa calibrate.py e utilizando 24 novas imagens para melhorar os a precisão dos próximos passos</p>
+          <p>Após a execução é gerado o arquivo params_py.xml, que possui os parâmetros para associar uma câmera da outra.</p>
+		
+				<h3>(B)</h3>
+
+          <p>Adaptou-se código para a entrada do arquivo params_py.xml e executou-se o código disparity_params_gui.py.”</p>
+          <p>Ao executar o programa é possível ajustar os parâmetros do casamento de blocos através de uma janela, podendo ajustar configurações dos filtros, tamanho do bloco e núemro de disparidades.</p>
+					<p>Ajustando os parâmetros para identificar com certa precisão espacial o objeto, no caso foi utilizado um caderno, e ao final encerrando o programa com a tecla "Esc" é gerado o arquivo depth_estmation_params_py.xml, que será utilizado no próximo passo para calculo de profundidade.</p>
+		
+				<h3>(C)</h3>
+
+					<p></p>
+
+          <img src="Figure_1.png">
+    
+			<h2>Análise e Discussão</h2>
+
+						<p>
+						</p>
+						<p>
+						</p>
+						<p></p>
+
+			<h2>Conclusões</h2>
+
+						<p><br>
+						
+						
+						</p>
+						
+			
+			<h2>Referências</h2>
+
+				<p>		  [1] Geometria epipolar e visão estereo:
+						https://learnopencv.com/introduction-to-epipolar-geometry-and-stereo-vision>
+						 [2] Confecção e calibração de uma câmera estereo:
+						https://learnopencv.com/making-a-low-cost-stereo-camera-using-opencv <br>
+					 	 [3] Distorção em lentes:
+						https://learnopencv.com/understanding-lens-distortion/<br>
+						 [4] Calibração de câmera e reconstrução 3D:
+						https://docs.opencv.org/4.x/d9/d0c/group__calib3d.html#ga7dfb72c9cf9780a347fbe3d1c47e5d5a<br>
+						 [5]:
+						 <br>
+				</p>
+
+
+	</body>
+
+</html>
