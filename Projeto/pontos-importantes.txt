@@ -1,0 +1,41 @@
+Explicação:
+
+    detectar_circulo_pote(img):
+        Usa a Transformada de Hough para detectar círculos na imagem. Isso é útil para encontrar o pote na imagem.
+        Retorna as coordenadas (x, y) e o raio r do círculo detectado.
+
+    definir_cor_fundo(imagem_pote_vazio):
+        Detecta o círculo do pote usando a função detectar_circulo_pote.
+        Cria uma máscara circular para focar apenas na área do pote e calcula a cor média do fundo dentro dessa área.
+        Retorna a cor média do fundo em HSV e as coordenadas do círculo do pote.
+
+    detectar_racao(imagem, cor_fundo_hsv, circulo_pote, area_threshold):
+        Aplica uma máscara circular à imagem para focar apenas na área do pote.
+        Calcula a área do fundo visível e a compara com o area_threshold para determinar se o pote está vazio ou não.
+
+Notas:
+
+    O raio_buffer é usado para ajustar o raio do círculo, evitando que bordas ou áreas indesejadas interfiram na análise.
+    O minRadius e maxRadius em detectar_circulo_pote podem precisar de ajuste conforme o tamanho do pote nas imagens.
+
+Essa abordagem melhora a precisão ao desconsiderar o fundo fora do pote e focar apenas na área relevante.
+
+
+
+para v3:
+
+Explicação:
+
+    Salvando a imagem do círculo detectado no pote vazio:
+        Função definir_cor_fundo: Após detectar o círculo que representa o pote, o código desenha esse círculo na imagem (img_circulo_destacado) com uma borda verde. A imagem é então salva como pote_vazio_circulo_detectado.jpg.
+
+    Salvando a imagem com a área do fundo destacada na imagem com ração:
+        Função detectar_racao: Após encontrar os contornos correspondentes ao fundo do pote, esses contornos são desenhados na imagem original (img_fundo_destacado) com uma borda vermelha. A imagem é salva como area_fundo_detectada.jpg.
+
+    Parâmetro salvar_imagem:
+        Tanto na função definir_cor_fundo quanto em detectar_racao, há um parâmetro salvar_imagem que, se True, ativa o salvamento das imagens destacadas.
+
+Notas:
+
+    Certifique-se de que os caminhos e permissões para salvar as imagens estejam corretos no ambiente onde o código será executado.
+    As imagens salvas permitirão visualizar o processo de detecção, facilitando a depuração e o ajuste do algoritmo.
