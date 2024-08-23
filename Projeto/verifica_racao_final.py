@@ -95,10 +95,10 @@ def detectar_racao(imagem, cor_fundo_hsv, raio_buffer=5, salvar_imagem=False):
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
     
     # Salvar imagem destacando a área do fundo encontrada, se necessário
-    #if salvar_imagem:
-    #    img_fundo_destacado = img_cortada.copy()
-    #    cv2.drawContours(img_fundo_destacado, contours, -1, (0, 0, 255), 2)
-    #    cv2.imwrite(f'area_fundo_detectada{imagem}.jpg', img_fundo_destacado)
+    if salvar_imagem:
+        img_fundo_destacado = img_cortada.copy()
+        cv2.drawContours(img_fundo_destacado, contours, -1, (0, 0, 255), 2)
+        cv2.imwrite('area_fundo_detectada.jpg', img_fundo_destacado)
     
     # Calcula a área total dos contornos
     area_racao = sum(cv2.contourArea(contour) for contour in contours)
@@ -137,16 +137,17 @@ cor_fundo_hsv, _ = definir_cor_fundo(imagem_pote_vazio, salvar_imagem=True)
 
 imagem_pote = 'img_projeto/pote-azul-70.jpeg'
 
-imagem_pote_cheio = 'img_projeto/pote-azul-cheio.jpeg'
+imagem_pote_cheio = 'img_projeto/pote-azul-70.jpeg'
 #area_threshold = 0.5  # 20% da área do pote visível
-area_racao = detectar_racao(imagem_pote, cor_fundo_hsv, salvar_imagem=True)
-area_cheio = detectar_racao(imagem_pote_cheio, cor_fundo_hsv, salvar_imagem=True)
+area_cheio = detectar_racao(imagem_pote_cheio, cor_fundo_hsv, salvar_imagem=False)
+area_racao = detectar_racao(imagem_pote, cor_fundo_hsv, salvar_imagem=False)
+
 
 area_threshold = area_cheio * 0.50
 
-print(area_racao)
-print(area_cheio)
-print(area_threshold)
+print(f'Area de ração: {area_racao}')
+print(f'Area pote cheio: {area_cheio}')
+print(f'Valor limite: {area_threshold}')
 
 
 
