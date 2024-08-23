@@ -139,8 +139,10 @@ imagem_pote = 'img_projeto/pote-azul-70.jpeg'
 
 imagem_pote_cheio = 'img_projeto/pote-azul-70.jpeg'
 #area_threshold = 0.5  # 20% da área do pote visível
-area_cheio = detectar_racao(imagem_pote_cheio, cor_fundo_hsv, salvar_imagem=False)
-area_racao = detectar_racao(imagem_pote, cor_fundo_hsv, salvar_imagem=False)
+
+# salvar_imagem=True para salvar na pasta atual os resultados
+area_cheio = detectar_racao(imagem_pote_cheio, cor_fundo_hsv, salvar_imagem=True)
+area_racao = detectar_racao(imagem_pote, cor_fundo_hsv, salvar_imagem=True)
 
 
 area_threshold = area_cheio * 0.50
