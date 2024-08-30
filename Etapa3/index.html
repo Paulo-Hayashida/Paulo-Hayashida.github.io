@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Etapa 3 - Desenvolvimento do Sistema de Processamento de Visão</title>
+  <style>
+  .image-container {
+    display: inline-block;
+    width: 30%;
+    margin-right: 1.5%;
+    vertical-align: top;
+  }
+
+  .image-container img {
+    width: 50%;
+    height: auto;
+  }
+  </style>
+    
+  </head>
+
+  <body>
+    <h1>Biblioteca do OpenCV</h1>
+
+      <p>Nesta etapa é feita uma breve explicação da bilioteca OpenCV que foi utilizado neste projeto, bem como algumas das funções utilizadas</p>
+    
+    <h2>OpenCV</h2>
+
+      <p>OpenCV é uma biblioteca open-source e extensivamente utilizada na área de visão computacional. Desenvolvida para ser eficiente computacionalmente e voltada para aplicações em tempo real. </p>
+      <p>A biblioteca contém mais de 500 funções, dentre as quais são aplicadas para manipulação de imagens e vídeos. Entre suas funcionalidades estão aplicação de filtros, leitura e gravação de imagens e vídeos, mudanças de escala e dimensionalidade, extração de contornos, entre outros.</p>
+    
+    <h2>Funções do OpenCV</h2>
+
+      <h3>cv.HoughCircles()</h3>
+      
+        <p>Essa função utiliza a transformada de Hough para detectar círculos dentro da imagem</p>
+
+      <h3>cv2.cvtColor()</h3>
+    
+        <p>cv2.cvtColor converte a imagem de um sistema de cores para outro como RBG para tons de cinza(GRAY) ou RBG para HSV</p>
+        <p>O sistema HSV permite ver melhor o contraste da imagem, identificando melhor as cores presentes</p>
+        <p>Um exemplo de uso </p>
+
+      <h3>cv2.findContours()</h3>
+        <p>Com o cv2.findCountours é possível, a partir de uma imagem binária, encontrar contornos, identificados pela variação de tonalidade</p>
+        <p>Após encontrados os contornos a própria biblioteca possui funções para calcular parâmetros como área, perimetro, entre outros.</p>
+    
+  </body>
+  
+</html>
