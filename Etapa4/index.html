@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Etapa 4 - Elaboração do Laboratório Experimental</title>
+  <style>
+  .image-container {
+    display: inline-block;
+    width: 30%;
+    margin-right: 1.5%;
+    vertical-align: top;
+  }
+
+  .image-container img {
+    width: 50%;
+    height: auto;
+  }
+  </style>
+    
+  </head>
+
+  <body>
+    <h1>Laboratório Experimental</h1>
+
+      <p>Nesta etapa é contruído um laboratório experimental para testar de forma prática a aplicação implementada. O laboratório possui um roteiro para acompanhar o passo a passo de como utilizar o programa e diferentes cenários de aplicação</p>
+    
+      <h2>Roteiro</h2>
+
+        <p>O roteiro do laboratório é composto pelos seguinte elementos, breve introdução, procedimento experimental com as instruções e questionários ao final de cada etapa para reforçar o aprendizado e a importância do projeto proposto. ao final do documento elaborado também há a Enquete Subjetiva de Opinião</p>
+    
+        <h3>Introdução</h3>
+
+          <p>Neste roteiro experimental iremos introduzir a ferramenta para identificação da escassez de um determinado material em certo local (no caso ração para alimentação de animais).</p>
+          <p>Essa ferramenta foi idealizada após entrevistas com pessoas de diversas profissões e grau de conhecimento técnico em captura de imagens. Com essas entrevistas foi vista a necessidade de uma ferramenta que automatizasse e facilitasse o processo de identificação de quando a ração estivesse acabando em um pote utilizado para animais de estimação, avisando ao usuário quando isso acontecesse.</p>
+          <p>Também foi verificada que tal ferramenta seria útil para outras tarefas relacionadas com escassez, como reestoque de prateleiras em um mercado, porém este relatório abrange somente o uso para alimentação de animais de estimação.</p>
+
+        <h3>Funcionamento da Ferramenta</h3>
+        <p>Esta ferramenta identifica as bordas dos objetos de uma determinada imagem, utilizando a comparação de duas imagens de um mesmo recipiente para determinar a porcentagem que este recipiente está preenchido.</p>
+        <p>Para isso utilizamos bibliotecas de OpenCV para identificação de bordas e círculos utilizando cores, além de funções para corte das imagens.</p>
+        <p>Deverá ser utilizado uma imagem base do recipiente como banco de dados, esta servirá de padrão para comparação com a imagem que o usuário submeterá para avaliação durante a utilização da ferramenta.</p>
+
+        <h3>Procedimento Experimental</h3>
+          <h4>Parte 1 : Executar exemplo de identificação de quantidade de ração</h4>
+            <p>1- Baixe o arquivos com imagens de exemplo, img_projeto.zip, e o programa verifica_racao_final.py, disponível em https://github.com/Paulo-Hayashida/Paulo-Hayashida.github.io/tree/main/Projeto.</p>
+            <p>2- Descompacte o arquivo de imagens.</p>
+            <p>3- O usuário deve ativar o ambiente Python nesta pasta com os arquivos;</p>
+            <p>4- Execute o programa.</p>
+
+            <p>Responda: Qual foi a saída do programa? Análise a imagem utilizada para esse teste, o resultado está de acordo com a imagem visualizada?</p>
+
+          <h4>Parte 2: Executar imagens próprias ou imagens de outro diretório</h4>     
+            <p></p>
+            <p>1 - Altere os caminhos dos arquivos para testar o programa com imagens tiradas por uma câmera ou webcam.</p>
+            <p></p>
+            <p>Responda: Qual a saída do programa? Ela corresponde com a imagem que foi utilizada no programa?</p>
+    
+  </body>
+  
+</html>
