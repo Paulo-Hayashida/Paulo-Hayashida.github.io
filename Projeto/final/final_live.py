@@ -166,11 +166,11 @@ def entrada():
         cv2.imshow('frame', frame)
         k = cv2.waitKey(1)
         if k == ord('c'):
-            cv2.imwrite('img_projeto/pote-vazio.jpg', frame)
+            cv2.imwrite('../img_projeto/pote-cheio.jpg', frame)
             print("Salvando imagem do pote vazio")
         
         if k == ord('t'):
-            cv2.imwrite('img_projeto/pote-teste.jpg', frame)
+            cv2.imwrite('../img_projeto/pote-teste.jpg', frame)
             print("Salvando imagem do pote para teste")
             
             
@@ -198,10 +198,8 @@ elif selecao == "b":
         imagem_pote = '../img_projeto/pote-azul-70.jpeg'
     elif (escolha == "a"):
         entrada()
-        imagem_pote_cheio = 'img_projeto/pote-cheio.jpg'
-        img_pote_cheio =  cv2.imread(imagem_pote_cheio)
-        imagem_pote = 'img_projeto/pote-teste.jpg'
-        img_pote =  cv2.imread(imagem_pote)
+        imagem_pote_cheio = '../img_projeto/pote-cheio.jpg'
+        imagem_pote = '../img_projeto/pote-teste.jpg'
     B_A_img_cheio, area_racao = detectar_racao(imagem_pote_cheio, cor_fundo_hsv, True)
     B_A_img_teste, area_atual = detectar_racao(imagem_pote, cor_fundo_hsv, True)
     show_percent, status_pote =  calcula_percent(area_atual)
