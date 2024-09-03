@@ -2,6 +2,7 @@ import cv2
 import numpy as np
 
 
+
 def webcam():
     
     if not cap.isOpened():
@@ -9,6 +10,8 @@ def webcam():
         exit()
 
     cap = cv2.VideoCapture(0)
+
+    cor_fundo_hsv = [[5, 100, 20], [30, 255, 200]]
 
     # Get current width of frame
     width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)   # float
@@ -25,10 +28,11 @@ def webcam():
             print("Can't receive frame (stream end?). Exiting ...")
             break
 
-
+        img_destacada, area_racao  = detectar_racao(frame, cor_fundo_hsv, salvar_imagem=True)
 
         # Display the resulting frame
-        cv2.imshow('frame', frame)
+        cv2.imshow('frame', img_destacada)
+        
 
         # Save on "s" key or exit on "q"
         k = cv2.waitKey(1) 
