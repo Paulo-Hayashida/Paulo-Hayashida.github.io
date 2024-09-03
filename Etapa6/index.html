@@ -13,7 +13,7 @@
   }
 
   .image-container img {
-    width: 50%;
+    width: 65%;
     height: auto;
   }
   </style>
@@ -50,22 +50,58 @@
     
     <h2>Materiais e Métodos</h2>
 
-      <p></p>
-      <p></p>
-      <p></p>
-      <p></p>
+      <p>Os materiais como imagens de teste e bilbiotecas utilizadas são apresantadas nesse capítulo. Também são demonstradas algumas das principais funções utilizadas</p>
     
       <h3>Modelagem Funcional do SPV</h3>
+
+        <p>Abaixo é apresentado o fluxograma do funcionamento do modelo proposto.</p>
+        <div class='image-container'>
+       	  <img src="Fluxograma.png" alt="Fluxograma">
+    	  </div>
+    
       <h3>Implementação do Sistema de Processamento da Visão (SPV)</h3>
+
+        <p>A principal biblioteca utilizada foi a OpenCV que permite fazer diversas manipulações com imagens, como mudança de sistema de cores, identificação de círculos, identificação de contorno, desenho e cálculo de área de contornos encontrados</p>
+
+        <h4>Funções do OpenCv</h4>
+
+          <h5>cv.HoughCircles()</h5>
+      
+            <p>Essa função utiliza a transformada de Hough para detectar círculos dentro da imagem</p>
+            <p>Exemplo da função de transformada de Hough</p>
+            <div class='image-container'>
+       	      <img src="circulo_detectado.jpg" alt="HoughCircles">
+    	      </div>
+    
+          <h5>cv2.cvtColor()</h5>
+    
+            <p>cv2.cvtColor converte a imagem de um sistema de cores para outro como RBG para tons de cinza(GRAY) ou RBG para HSV</p>
+            <p>O sistema HSV permite ver melhor o contraste da imagem, identificando melhor as cores presentes</p>
+            <p>Um exemplo de uso é apresentado abaixo</p>
+            <div class='image-container'>
+       	      <img src="img.jpg" alt="Imagem no sistema RGB">
+    	      </div>
+            <div class='image-container'>
+       	      <img src="hsv.jpg" alt="Sistema HSV">
+    	      </div>
+
+          <h5>cv2.findContours()</h5>
+            <p>Com o cv2.findCountours é possível, a partir de uma imagem binária, encontrar contornos, identificados pela variação de tonalidade</p>
+            <p>Após encontrados os contornos a própria biblioteca possui funções para calcular parâmetros como área, perimetro, entre outros.</p>
+            <p>A imagem original com o desenho do contorno encontrado é mostrado abaixo</p>
+              <div class='image-container'>
+                <img src="area_fundo_detectada.jpg" alt="DrawContours">
+              </div>
+    
       <h3>Lista dos arquivos: dos códigos-fonte, imagens, vídeos e arquivos auxiliares</h3>
 
     <h2>Laboratório Experimental</h2>
 
-      <p></p>
+      <p>Nesse capítulo são apresentados o roteiro experimental e os resultados obtidos do teste de campo</p>
 
       <h3>Roteiro do Laboratório Experimental</h3>
 
-        <p></p>
+        <p>O roteiro do laboratório pode ser baixado no link <a href = "https://docs.google.com/document/d/1IZMvuGSL5sTK_YRkgipu_TeM5CjDfhwPSw4A1O8JUR0/edit?usp=drive_link">https://docs.google.com/document/d/1IZMvuGSL5sTK_YRkgipu_TeM5CjDfhwPSw4A1O8JUR0/edit?usp=drive_link</a></p>
 
       <h3>Análise dos Resultados do Teste de Campo (TCS)</h3>
 
